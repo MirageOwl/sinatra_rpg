@@ -1,0 +1,21 @@
+.collect.row{style: "padding: 30px"}
+  .three.columns
+    %b
+      Count
+    = @bag['iron']
+    %button.u-full-width{onclick: "collect('iron')"} Iron
+  .three.columns
+    %b
+      Count
+    = @bag['fur']
+    %button.u-full-width{onclick: "collect('fur')"} Fur
+  .three.columns
+    %b
+      Count
+    = @bag['silk']
+    %button.u-full-width{onclick: "collect('silk')"} Silk
+  .three.columns
+    %b
+      Count
+    = @bag['herb']
+    %button.u-full-width{onclick: "collect('herb')"} Herb

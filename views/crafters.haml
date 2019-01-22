@@ -1,0 +1,18 @@
+.crafters
+  %ul
+    %li
+      %button{onclick: "openMenu('blacksmith')"} Blacksmith
+      .blacksmith{hidden: ""}
+        = haml :card, locals: {crafter: :blacksmith}
+    %li
+      %button{onclick: "openMenu('leatherworker')"} Leatherworker
+      .leatherworker{hidden: ""}
+        = haml :card, locals: {crafter: :leatherworker}
+    %li
+      %button{onclick: "openMenu('tailor')"} Tailor
+      .tailor{hidden: ""}
+        = haml :card, locals: {crafter: :tailor}
+    %li
+      %button{onclick: "openMenu('alchemist')"} Alchemist
+      .alchemist{hidden: ""}
+        = haml :card, locals: {crafter: :alchemist}

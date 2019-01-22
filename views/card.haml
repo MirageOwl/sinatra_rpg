@@ -1,0 +1,10 @@
+.card
+  %b
+    Cost
+  %p
+    = "#{@crafters[crafter][:cost]} x #{@crafters[crafter][:display]}"
+  %b
+    Result
+  %p
+    = @crafters[crafter][:result]
+  %button{onclick: "craft('#{crafter}')"} Craft

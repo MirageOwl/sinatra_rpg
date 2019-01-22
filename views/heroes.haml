@@ -1,0 +1,7 @@
+.heroes
+  %ul
+    - @heroes.each do |hero|
+      %li
+        %button #{hero}
+    %li
+      %button{onclick: "variable()"} Create a Hero

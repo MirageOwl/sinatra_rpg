@@ -2,6 +2,8 @@
   %ul
     - @heroes.each do |hero|
       %li
-        %button #{hero}
+        %button{onclick: "openMenu('#{hero}')"}= hero
+        %div{class: hero+" info", hidden: ""}
+          = haml :hero, locals: {name: hero}
     %li
       %button{onclick: "variable()"} Create a Hero

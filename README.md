@@ -18,6 +18,7 @@ First make sure to install the required gems which are:
 - thin
 - haml
 - sinatra
+
 You can do this either by hand or using bundler with the Gemfile with command: `bundle install`.
 
 Note: On Windows machines the gem eventmachine which is a dependency has to be uninstalled and installed again using `--platform=ruby`

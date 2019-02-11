@@ -1,3 +1,17 @@
 .card.hero
-  %b Name
-  %p= name
+  .row
+    %b Name
+    %p= hero.name
+  .row
+    .three.columns
+      %b Atk
+      %p= hero.atk
+    .three.columns
+      %b Def
+      %p= hero.def
+    .three.columns
+      %b Int
+      %p= hero.int
+    .three.columns
+      %b Spd
+      %p= hero.spd

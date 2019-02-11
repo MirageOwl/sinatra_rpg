@@ -1,5 +1,8 @@
+# public
 require 'sinatra'
 require 'Singleton'
+# usr libs
+require_relative 'Character'
 
 set :public_folder, File.dirname(__FILE__) + '/static'
 
@@ -16,7 +19,8 @@ class Bag
   end
 end
 
-defined = [:index, :crafters, :heroes, :form, :collect]
+warrior = Job.new atk: 8, def: 6
+defined = [:index, :crafters, :heroes, :hero_form, :collect, :monsters]
 heroes = []
 crafters = {
   blacksmith: {cost: 3, item: "iron", display: "Iron Shard", result: "Iron Sword"},
@@ -26,7 +30,7 @@ crafters = {
 }
 
 post '/heroes' do
-  heroes.push params['name']
+  heroes.push Character.new params['name'], warrior
   @heroes = heroes
   haml :heroes
 end

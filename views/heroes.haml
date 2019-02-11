@@ -1,9 +1,9 @@
 .heroes
-  %ul
+  %ul.six.columns.offset-by-three
     - @heroes.each do |hero|
       %li
-        %button{onclick: "openMenu('#{hero}')"}= hero
-        %div{class: hero+" info", hidden: ""}
-          = haml :hero, locals: {name: hero}
+        %button{onclick: "openMenu('#{hero.name.gsub(" ", "_")}')"}= hero.name
+        %div{class: hero.name.gsub(" ", "_")+" info", hidden: ""}
+          = haml :hero, locals: {hero: hero}
     %li
       %button{onclick: "variable()"} Create a Hero

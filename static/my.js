@@ -1,6 +1,6 @@
-var variable = function () { window.location.replace("/form"); };
-var openMenu = function (crafter) {
-  $("."+crafter).toggle();
+var variable = function () { window.location.replace("/hero_form"); };
+var openMenu = function (target) {
+  $("."+target).toggle();
 };
 var craft = function (crafter) {
   $.post("/crafters", {'crafter': crafter},

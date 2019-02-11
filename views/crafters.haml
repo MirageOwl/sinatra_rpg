@@ -1,5 +1,5 @@
 .row.crafters
-  %ul.three.columns.offset-by-three
+  %ul.four.columns.offset-by-two
     %li
       %button{onclick: "openMenu('blacksmith')"} Blacksmith
       .blacksmith{hidden: ""}
@@ -8,7 +8,7 @@
       %button{onclick: "openMenu('leatherworker')"} Leatherworker
       .leatherworker{hidden: ""}
         = haml :card, locals: {crafter: :leatherworker}
-  %ul.three.columns
+  %ul.four.columns
     %li
       %button{onclick: "openMenu('tailor')"} Tailor
       .tailor{hidden: ""}

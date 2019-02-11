@@ -7,15 +7,11 @@
   %script{type: "text/javascript", src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"}
 
   %body
-    #header
-    .header-menu.row
-      %a{href: "/collect"}
-        .menu-item.three.columns.offset-by-three
-          Collect
-      %a{href: "/crafters"}
-        .menu-item.three.columns
-          Crafters
-    #content
-    =yield
-
+    #header.row
+      =haml :header
+    #content.row
+      .sidebar-left.two.columns
+        =haml :left
+      .eight.columns
+        =yield
     %script{type: "text/javascript", src: "my.js"}

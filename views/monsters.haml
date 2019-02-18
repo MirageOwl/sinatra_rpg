@@ -1,24 +1,7 @@
 .monsters
   %ul.six.columns.offset-by-three
-    %li
-      %button{onclick: "openMenu('qualiox')"} Qualiox
-      .card.qualiox{hidden: ""}
-        %p
-          This tiny, snake-like, infernal monster lairs in city sewers.
-          It attacks with crushing blows, thrown weapons and scorching gas.
-          It can only be harmed by nonmagical weapons.
-          They lair in mobs of 3-10.
-    %li
-      %button{onclick: "openMenu('cockatrice')"} Cockatrice
-      .card.cockatrice{hidden: ""}
-        %p
-          This massive, feathered creature lives in icy climes.
-          It ensares its prey, which includes medium-sized creatures,
-          monstrous humanoids, and large creatures.
-          It attacks with strangling grabs, a petrifying gaze and toxic bites.
-    %li
-      %button{onclick: "openMenu('zardbear')"} Zardbear
-      .card.zardbear{hidden: ""}
-        %p
-          This bear-sized frog-like monster makes its home in mountains.
-          It attacks with spines, debilitating effects and elemental magic.
+    - @monsters.each do |monster|
+      %li
+        %button{onclick: "openMenu('#{monster.name.gsub(" ", "_")}')"}= monster.name
+        %div{class: monster.name.gsub(" ", "_")+ " card", hidden: ""}
+          %p= monster.text
